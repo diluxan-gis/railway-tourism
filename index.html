@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- This tells the browser what kind of file this is -->
+  <meta charset="UTF-8" />
+  <!-- This makes the website look correct on phones too -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- The title shown on the browser tab -->
+  <title>Sri Lanka Hill Country Railway — Colombo to Badulla</title>
+
+  <!-- LEAFLET CSS: This loads the map styles from the internet (free) -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+
+  <!-- OUR OWN CSS: This loads our style.css file -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- TOP HEADER BAR -->
+  <div id="header">
+    <h1>🚂 Sri Lanka Hill Country Railway</h1>
+    <p>Colombo Fort → Badulla · 292 km · Click any station to learn more</p>
+  </div>
+
+  <!-- THE MAP: This empty div is where Leaflet draws the map -->
+  <div id="map"></div>
+
+  <!-- INFO PANEL: Shows station details when you click a marker -->
+  <div id="info-panel">
+    <div id="info-content">
+      <p id="info-placeholder">👆 Click a station on the map to see details here</p>
+    </div>
+  </div>
+
+  <!-- LEAFLET JS: This loads the map engine from the internet (free) -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+  <!-- OUR OWN JS: This loads our app.js file (must come AFTER leaflet) -->
+  <script src="app.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,143 @@
+/* =============================================
+   GLOBAL STYLES
+   * { } means "apply this to every element"
+   margin and padding: 0 removes default spacing
+   box-sizing: border-box makes sizing more predictable
+   ============================================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body is the whole page — we use flexbox to stack items vertically */
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background-color: #1a1a2e;
+  color: #ffffff;
+  height: 100vh; /* 100vh = full screen height */
+  display: flex;
+  flex-direction: column; /* stack header, map, panel top to bottom */
+}
+
+/* =============================================
+   HEADER BAR (top strip)
+   ============================================= */
+#header {
+  background: linear-gradient(135deg, #0f3460, #16213e);
+  padding: 12px 20px;
+  border-bottom: 2px solid #e94560;
+  flex-shrink: 0; /* don't let header shrink */
+}
+
+#header h1 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #ffffff;
+  letter-spacing: 0.5px;
+}
+
+#header p {
+  font-size: 13px;
+  color: #a8b2c1;
+  margin-top: 3px;
+}
+
+/* =============================================
+   THE MAP (takes up most of the screen)
+   flex: 1 means "take all remaining space"
+   ============================================= */
+#map {
+  flex: 1;
+  width: 100%;
+  min-height: 400px;
+}
+
+/* =============================================
+   INFO PANEL (bottom strip — shows station info)
+   ============================================= */
+#info-panel {
+  background: #16213e;
+  border-top: 2px solid #e94560;
+  padding: 12px 20px;
+  min-height: 80px;
+  max-height: 180px;
+  overflow-y: auto; /* scroll if content is too long */
+  flex-shrink: 0;
+}
+
+#info-placeholder {
+  color: #a8b2c1;
+  font-size: 14px;
+  font-style: italic;
+}
+
+/* Station name in info panel */
+#info-content h2 {
+  color: #e94560;
+  font-size: 17px;
+  margin-bottom: 6px;
+}
+
+/* Info rows (elevation, distance, etc.) */
+.info-row {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 6px;
+}
+
+.info-item {
+  background: #0f3460;
+  border-radius: 6px;
+  padding: 4px 10px;
+  font-size: 13px;
+  color: #cdd6f4;
+}
+
+.info-item span {
+  color: #89b4fa;
+  font-weight: 600;
+}
+
+/* Tourist highlight text */
+.tourist-highlight {
+  font-size: 13px;
+  color: #a6e3a1;
+  margin-top: 4px;
+}
+
+/* Facilities list */
+.facilities {
+  font-size: 12px;
+  color: #a8b2c1;
+  margin-top: 3px;
+}
+
+/* =============================================
+   LEAFLET POPUP (the little bubble on the map)
+   ============================================= */
+.leaflet-popup-content-wrapper {
+  background: #16213e;
+  color: #ffffff;
+  border: 1px solid #e94560;
+  border-radius: 8px;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.leaflet-popup-tip {
+  background: #16213e;
+}
+
+.popup-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: #e94560;
+  margin-bottom: 4px;
+}
+
+.popup-detail {
+  font-size: 12px;
+  color: #cdd6f4;
+  line-height: 1.6;
+}
